@@ -349,13 +349,13 @@ class autoHandler(idaapi.action_handler_t):
         functreeFilepath = autoGptfolder + "funcTree.txt"
         mainFunctreeFilepath = autoGptfolder + "mainFuncTree.txt"
         stringsFilepath = autoGptfolder + "effectiveStrings.txt"
-        file = open(functreeFilepath, "r")
+        file = open(functreeFilepath, "r", encoding='utf-8')
         functreeData = file.read()
         file.close()
-        file = open(mainFunctreeFilepath, "r")
+        file = open(mainFunctreeFilepath, "r", encoding='utf-8')
         mainFunctreeData = file.read()
         file.close()
-        file = open(stringsFilepath, "r")
+        file = open(stringsFilepath, "r", encoding='utf-8')
         stringsData = file.read()
         file.close()
         funcNumber = idaapi.get_func_qty()
